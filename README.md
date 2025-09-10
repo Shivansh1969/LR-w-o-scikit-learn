@@ -21,21 +21,24 @@ This project was created for learning purposes, to build a fundamental understan
 
 ## Mathematical Formulation
 
-- **Model Equation**:  
-  \( h(x) = m \cdot x + c \)
+- **Compute Means**
+  
+  x̄ = (1/n) Σ x_i
+  ȳ = (1/n) Σ y_i
 
-- **Cost Function (Mean Squared Error)**:  
-  \[
-    J(m, c) = \frac{1}{n} \sum_{i=1}^{n} (y_i - (m \cdot x_i + c))^2
-  \]
+- **Sum of Squares**
 
-- **Gradient Descent Updates**:  
-  \[
-    m := m - \alpha \frac{\partial J}{\partial m}
-  \]
-  \[
-    c := c - \alpha \frac{\partial J}{\partial c}
-  \]
+  SSxx = Σ (x_i - x̄)^2
+  SSxy = Σ (x_i - x̄)(y_i - ȳ)
+
+- **Slope (m) and Intercept (c)**
+
+  m = SSxy / SSxx
+  c = ȳ - m * x̄
+
+- **Regression Model**
+
+  ŷ = m * x + c
 
 ---
 
